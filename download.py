@@ -13,6 +13,23 @@ def select_path():
     path_label.configure(text=path)
 
 
+def download_file():
+    # Get user path
+    get_link = link_field.get()
+
+    # Get selected path
+    user_path = path_label.cget("text")
+    screen.title("Downloading...")
+
+    # Download video
+    mp4_video = YouTube(get_link).streams.get_highest_resolution().download()
+    vid_clip = VideoFileClip(mp4_video)
+    vid_clip.close()
+
+    # Move to selected directory
+    shutil.move(mp4_video, user_path)
+    screen.title("Download Complete! Download Another Video:")
+
 
 # App frame
 screen = Tk()
