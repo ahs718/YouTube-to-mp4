@@ -20,6 +20,9 @@ title = screen.title("Youtube to mp4")
 canvas = Canvas(screen, width=480, height=300)
 canvas.pack()
 
+# Link field
+link_field = Entry(screen, width=50)
+link_label = Label(screen, text="Enter YouTube Link: ")
 
 # App loop
 screen.mainloop()
