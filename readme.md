@@ -30,13 +30,13 @@ Before trying to run this program, ensure that python is installed on your compu
 3.   Install the required packages:
 
      ```bash
-     pip install -r requirements.txt
+     pip3 install -r requirements.txt
      ```
 
 4.   Run the program:
 
      ```bash
-     python main.py
+     python3 main.py
      ```
 
      
